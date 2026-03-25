@@ -1,0 +1,21 @@
+import javax.swing.JOptionPane;
+
+public class Aplicacao {
+        private double base;
+        private double altura;
+        private double comprimento;
+        private double volume;
+        
+        public void calculo(double base, double altura, double comprimento, double volume){
+            base = Double.parseDouble(JOptionPane.showInputDialog("Digite "
+                    + "a medida da base da viga: "));
+            altura = Double.parseDouble(JOptionPane.showInputDialog("Digite "
+                    + "a medida da altura da viga: "));
+            comprimento = Double.parseDouble(JOptionPane.showInputDialog("Digite "
+                    + "a medida do comprimento da viga: "));
+            volume = base*altura*comprimento;
+            
+            JOptionPane.showMessageDialog(null,"O volume da viga vai ser: " + volume);
+
+    }
+}
