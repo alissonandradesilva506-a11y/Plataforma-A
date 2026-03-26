@@ -1,10 +1,10 @@
 import javax.swing.JOptionPane;
 
 public class Aplicacao {
-        private double base;
-        private double altura;
-        private double comprimento;
-        private double volume;
+        protected double base;
+        protected double altura;
+        protected double comprimento;
+        protected double volume;
         
         public void calculo(double base, double altura, double comprimento, double volume){
             base = Double.parseDouble(JOptionPane.showInputDialog("Digite "
