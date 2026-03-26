@@ -1,0 +1,56 @@
+public class Associacao {
+    
+    public class info {
+        protected int id;
+        protected String nome;
+        protected String logradouro;
+        protected String numero;
+        protected String cep;
+        protected String bairro;
+        protected String cidade;
+        protected String uf;
+        protected String telefone;
+        protected String cpfCnpj;
+        
+        public info(int id, String nome, String logradouro, String numero, String cep, String bairro, String cidade, String uf, String telefone, String cpfCnpj){
+            this.id= id;
+            this.nome = nome;
+            this.logradouro = logradouro;
+            this.numero = numero;
+            this.cep = cep;
+            this.bairro= bairro;
+            this.cidade = cidade;
+            this.uf = uf;
+            this.telefone = telefone;
+            this.cpfCnpj = cpfCnpj; 
+        }
+    }
+    public class associado extends info {
+        protected String situacao;
+        protected String numeroAssociado;
+        
+        public associado(int id, String nome, String logradouro, String numero, String cep, String bairro, String cidade, String uf, String telefone, String cpfCnpj) {
+            super(id, nome, logradouro, numero, cep, bairro, cidade, uf, telefone, cpfCnpj);
+            this.situacao= situacao;
+            this.numeroAssociado= numeroAssociado;           
+        }
+    }
+    public class colaborador extends info {
+        protected String cargo;
+
+        public colaborador(int id, String nome, String logradouro, String numero, String cep, String bairro, String cidade, String uf, String telefone, String cpfCnpj) {
+            super(id, nome, logradouro, numero, cep, bairro, cidade, uf, telefone, cpfCnpj);
+            this.cargo = cargo;
+        }
+    }
+    public class fornecedor extends info {
+        protected String nomeFantasia;
+        protected String website;
+
+        public fornecedor(int id, String nome, String logradouro, String numero, String cep, String bairro, String cidade, String uf, String telefone, String cpfCnpj) {
+            super(id, nome, logradouro, numero, cep, bairro, cidade, uf, telefone, cpfCnpj);
+            this.nomeFantasia = nomeFantasia;
+            this.website = website;
+        }
+    }
+}
