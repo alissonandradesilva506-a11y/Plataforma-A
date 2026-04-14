@@ -1,0 +1,41 @@
+public class CalculoArea {
+    protected double calculo;
+    
+    public CalculoArea(double calculo){
+        this.calculo = calculo;
+    }
+    
+    public void mostrarCalculo(){
+        System.out.println("A area da figura é: "+ calculo);
+    }
+    
+    public class retangulo extends CalculoArea{
+        protected double comprimento;
+        protected double largura;
+        
+        public retangulo(double calculo) {
+            super(calculo);
+        }
+        
+        @Override
+        public void mostrarCalculo(){
+            this.calculo =(comprimento*largura);
+            System.out.println("A area da figura é: "+ calculo);
+        }
+    }
+    
+    public class trianguloRetangulo extends CalculoArea{
+        protected double altura;
+        protected double base;
+        
+        public trianguloRetangulo(double calculo) {
+            super(calculo);
+        }
+        
+        @Override
+        public void mostrarCalculo(){
+            this.calculo =(base*altura)/2;
+            System.out.println("A area da figura é: "+ calculo);
+        }
+    }
+}
